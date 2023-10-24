@@ -12,10 +12,15 @@ define('URL','http://localhost/mvc');
 
 $obRouter = new Router(URL);
 //Definir Rota HOME
-$obRouter->get('/',[
+$obRouter->post('/',[
     function(){
         return new Response(200,Home::getHome());
     }
 ]);
+//Definir Rota HOME
+
+//Imprime o Response da Rota
+$obRouter->run()->sendResponse();
+
 
 ?>
