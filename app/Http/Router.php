@@ -83,7 +83,8 @@ class Router{
         foreach($this->routes as $patternRoute=>$methods){
             
             //Verifica se a URI bate o Padrão
-            if(preg_match($patternRoute, $uri)){
+            if(preg_match($patternRoute, $uri)){ 
+                //asdas
                 //Verifica o Metodo
                 if($methods[$httpMethod]){
                     //Retorno dos Parametros da Rota
